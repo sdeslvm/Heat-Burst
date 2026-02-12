@@ -7,20 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		63F803B62F3CCE7D00627B16 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 63F803B52F3CCE7D00627B16 /* GoogleService-Info.plist */; };
 		FAD891A52EEBAA9E004DCA0E /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = FAD891A42EEBAA9E004DCA0E /* FirebaseCore */; };
 		FAD891A72EEBAA9E004DCA0E /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = FAD891A62EEBAA9E004DCA0E /* FirebaseDatabase */; };
 		FAD891A92EEBAA9E004DCA0E /* FirebaseInstallations in Frameworks */ = {isa = PBXBuildFile; productRef = FAD891A82EEBAA9E004DCA0E /* FirebaseInstallations */; };
 		FAD891AB2EEBAA9E004DCA0E /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = FAD891AA2EEBAA9E004DCA0E /* FirebaseMessaging */; };
 		FAD891AE2EEBABB9004DCA0E /* AppsFlyerLib in Frameworks */ = {isa = PBXBuildFile; productRef = FAD891AD2EEBABB9004DCA0E /* AppsFlyerLib */; };
 		FAD892212EEBB670004DCA0E /* AppInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = FAD8921D2EEBB670004DCA0E /* AppInfo.plist */; };
-		FAD892232EEBB77D004DCA0E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FAD892222EEBB77D004DCA0E /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		63F803B52F3CCE7D00627B16 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CE6A58F32EFA73D300F35488 /* Game.browserstack.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Game.browserstack.entitlements; sourceTree = "<group>"; };
 		FAD891862EEB9B54004DCA0E /* HeatBurst.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeatBurst.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAD8921D2EEBB670004DCA0E /* AppInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = AppInfo.plist; sourceTree = "<group>"; };
-		FAD892222EEBB77D004DCA0E /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -69,7 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				FAD8921D2EEBB670004DCA0E /* AppInfo.plist */,
-				FAD892222EEBB77D004DCA0E /* GoogleService-Info.plist */,
+				63F803B52F3CCE7D00627B16 /* GoogleService-Info.plist */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -148,7 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAD892212EEBB670004DCA0E /* AppInfo.plist in Resources */,
-				FAD892232EEBB77D004DCA0E /* GoogleService-Info.plist in Resources */,
+				63F803B62F3CCE7D00627B16 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,7 +247,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.heatburst.play;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -410,7 +410,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.heatburst.play;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -454,7 +454,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.heatburst.play;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

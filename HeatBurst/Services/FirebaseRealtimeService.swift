@@ -13,7 +13,7 @@ enum RemoteConfigError: Error {
 final class FirebaseRealtimeService {
     private let databaseURL: String
 
-    init(databaseURL: String = "https://zm-team-21088-default-rtdb.firebaseio.com/") {
+    init(databaseURL: String = "https://heat-burst-default-rtdb.firebaseio.com") {
         self.databaseURL = databaseURL
     }
 
@@ -33,6 +33,16 @@ final class FirebaseRealtimeService {
                 }
                 
                 logger.info("[Firebase] Raw response: \(String(describing: value))")
+                
+                // Добавляем детальное логирование структуры ответа
+                if let dict = value as? [String: String] {
+                    logger.info("[Firebase] Response keys: \(dict.keys.joined(separator: ", "))")
+                    for (key, val) in dict {
+                        logger.info("[Firebase] Key '\(key)' -> Value: '\(val)'")
+                    }
+                } else {
+                    logger.info("[Firebase] Response is not a dictionary: \(type(of: value))")
+                }
 
                 do {
                     let data = try JSONSerialization.data(withJSONObject: value, options: [])

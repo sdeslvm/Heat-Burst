@@ -6,6 +6,8 @@ private let logger = Logger(subsystem: Bundle.main.bundleIdentifier ?? "HeatBurs
 
 struct LinkAssemblyService {
     func buildBackendURL(parts: RemoteLinkParts, payload: TrackingPayload) -> URL? {
+        logger.info("[LinkAssembly] Input parts - host: '\(parts.host)', path: '\(parts.path)'")
+        
         let query = payload.toQueryString()
         logger.info("[LinkAssembly] Query string (before base64): \(query)")
         
@@ -16,6 +18,8 @@ struct LinkAssemblyService {
         logger.info("[LinkAssembly] Base64 encoded: \(encoded)")
         
         let combinedPath = "\(parts.host)\(parts.path)"
+        logger.info("[LinkAssembly] Combined path: '\(combinedPath)'")
+        
         let urlString = "https://\(combinedPath)?data=\(encoded)"
         logger.info("[LinkAssembly] ✅ Built backend URL: \(urlString)")
         

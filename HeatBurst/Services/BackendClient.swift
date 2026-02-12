@@ -31,6 +31,14 @@ final class BackendClient {
         
         if let responseString = String(data: data, encoding: .utf8) {
             logger.info("[POST] Response body: \(responseString)")
+            
+            // Добавляем детальный анализ структуры ответа
+            if let jsonData = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: String] {
+                logger.info("[POST] Response JSON keys: \(jsonData.keys.joined(separator: ", "))")
+                for (key, value) in jsonData {
+                    logger.info("[POST] Key '\(key)' -> Value: '\(value)'")
+                }
+            }
         }
         
         guard 200..<300 ~= httpResponse.statusCode else {

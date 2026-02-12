@@ -6,8 +6,8 @@ struct RemoteLinkParts: Decodable, Sendable {
     let path: String
 
     private enum CodingKeys: String, CodingKey {
-        case host = "stray"
-        case path = "swap"
+        case host = "creo"
+        case path = "false"
     }
 }
 
@@ -16,8 +16,8 @@ struct BackendLinkResponse: Decodable, Sendable {
     let tld: String
 
     private enum CodingKeys: String, CodingKey {
-        case domain = "begin"
-        case tld = "time"
+        case domain = "creo"
+        case tld = "false"
     }
 
     var finalURL: URL? {
